@@ -8,7 +8,7 @@ RUN     yum install -y npm
 # Bundle app source
 COPY . /src
 # Install app dependencies
-RUN cd /src; npm install
+RUN cd /src; sudo pm install
 
 EXPOSE  80
 CMD ["node", "/src/index.js"]
